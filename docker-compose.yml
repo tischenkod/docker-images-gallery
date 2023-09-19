@@ -1,6 +1,7 @@
 version: '3'
 services:
   frontend:
+    restart: always
     build: ./frontend
     ports:
       - '3000:3000'
@@ -11,6 +12,7 @@ services:
       - ./app/node_modules
       - ./frontend:/app
   api:
+    restart: anways
     build: ./api
     ports:
       - '5050:5050'
